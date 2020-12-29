@@ -1,0 +1,55 @@
+﻿.header {
+    position: relative;
+    display: flex;
+    float: left;
+    align-items: center;
+    width: calc(100% - 221px);
+    height: 60px;
+    border-bottom: 1px #e5e5e5 solid;
+}
+
+    .header .name {
+        padding: 16px;
+        float: left;
+        margin: auto 16px;
+    }
+
+        .header .name .option {
+            font-size: 16px;
+        }
+
+    .header .header-right {
+        right: 16px;
+        align-items:center;
+        position:absolute;
+    }
+
+        .header .header-right .header-option {
+            float: right;
+            width: 24px;
+            height: 24px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+
+        .header .header-right .header-admin {
+            margin: auto 8px auto 8px;
+            float:right;
+        }
+
+        .header .header-right .header-logo {
+            margin: auto 8px auto 8px;
+            width: 24px;
+            height: 24px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            float: right;
+        }
+
+.header-op {
+    background-image: url('/content/icon/option.png');
+}
+
+.header-log {
+    background-image: url('/content/icon/avatar-default.png');
+}

@@ -1,0 +1,65 @@
+﻿.content {
+    position: absolute;
+    top: 61px;
+    left: 221px;
+    width: calc(100% - 221px);
+    height: calc(94vh - 61px);
+    background-color: #ffffff;
+    /*padding: 16px;*/
+}
+
+    /*page-title*/
+    .content .header-content {
+        display:flex;
+        padding: 16px;
+        align-items:center; /*Căn chính giưa top bottom*/
+    }
+
+        .content .header-content .title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .content .header-content .content-feature {
+            position: absolute;
+            right: 16px;
+        }
+        /*filter-bar*/
+    .content .filter-bar .filter-left {
+        
+    }
+    
+    /*paging*/
+    .content .paging-bar {
+        height: 56px;
+        
+    }
+    .content .paging-bar .paging-option{
+        align-content:center;
+    }
+        .content .paging-bar .first {
+            background-image: url('/content/icon/btn-firstpage.svg');
+            background-size:contain;
+            float:left;
+        }
+        .content .paging-bar .bf {
+            background-image: url('/content/icon/btn-prev-page.svg');
+            background-size:contain;
+            float:left;
+        }
+        .content .paging-bar .af {
+            background-image: url('/content/icon/btn-next-page.svg');
+            background-size:contain;
+            float:left;
+        }
+        .content .paging-bar .last {
+            background-image: url('/content/icon/btn-lastpage.svg');
+            background-size:contain;
+            float:left;
+        }
+        .content .paging-bar .paging-record-info{
+            position:absolute;
+        }
+        .content .paging-bar .paging-record-option {
+            right: 16px;
+            position: absolute;
+        }

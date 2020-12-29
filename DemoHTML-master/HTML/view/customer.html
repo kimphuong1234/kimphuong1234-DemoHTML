@@ -1,0 +1,509 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <!-- dùng chung -->
+    <link href="/css/common/main.css" rel="stylesheet" />
+    <link href="/css/common/common.css" rel="stylesheet" />
+    <link href="/css/common/dialog.css" rel="stylesheet" />
+    <link href="/css/common/header.css" rel="stylesheet" />
+    <link href="/css/common/navbar.css" rel="stylesheet" />
+    <link href="/css/common/content.css" rel="stylesheet" />
+    <link href="/css/common/button.css" rel="stylesheet" />
+    <link href="/css/common/icon.css" rel="stylesheet" />
+    <link href="/css/common/toolbar.css" rel="stylesheet" />
+    <link href="/css/common/input.css" rel="stylesheet" />
+    <link href="/css/common/grid.css" rel="stylesheet" />
+    <!--dùng riêng-->
+    <link href="/css/page/employee.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo-site">
+            <div class="logo-box">
+                <div class="toggle-icon"></div>
+                <div class="amis-logo"></div>
+            </div>
+        </div>
+        <div class="navbar-content">
+            <div class="nav-item">
+                <div class="navbar-item-icon nav-item-1"></div>
+                <div class="navbar-item-text">Tổng quan</div>
+            </div>
+            <div class="nav-item">
+                <div class="navbar-item-icon nav-item-2"></div>
+                <div class="navbar-item-text">Đánh giá</div>
+            </div>
+            <div class="nav-item">
+                <div class="navbar-item-icon nav-item-1"></div>
+                <div class="navbar-item-text">Mua hàng</div>
+            </div>
+            <a class="nav-item" href="customer.html">
+                <div class="navbar-item-icon nav-item-3"></div>
+                <div class="navbar-item-text">Danh mục khách hàng</div>
+            </a>
+            <a class="nav-item" href="employee.html">
+                <div class="navbar-item-icon nav-item-3"></div>
+                <div class="navbar-item-text">Danh mục nhan vien</div>
+            </a>
+
+            <div class="nav-item">
+                <div class="navbar-item-icon nav-item-4"></div>
+                <div class="navbar-item-text">Thiết lập hệ thống</div>
+            </div>
+
+        </div>
+    </div>
+    <div class="header">
+        <div class="name">
+            <select class="option">
+                <option>Nhà hàng Biển Đông</option>
+                <option>Nhà hàng biển nhớ</option>
+                <option>Nhà hàng bờ biển</option>
+            </select>
+        </div>
+        <div class="header-right">
+            <div class="header-option header-op"></div>
+            <div class="header-admin">Nguyên Văn Mạnh</div>
+            <div class="header-logo header-log"></div>
+
+        </div>
+
+    </div>
+    <div class="content">
+        <div class="header-content">
+            <div class="title">Danh sách khách hàng</div>
+            <div class="content-feature">
+                <button class="btn-default">
+                    <div class="icon-add"></div>
+                    <div class="btn-text">Thêm khách hàng</div>
+                </button>
+            </div>
+
+        </div>
+        <div class="filter-bar">
+            <div class="filter-left">
+                <input class="icon-search input-search" style="width:200px" type="text" placeholder="Tìm kiếm theo ma, Tên khách hàng" />
+                <select>
+                    <option>Phòng đào tạo</option>
+                    <option>Phòng đào tạo</option>
+                    <option>Phòng đào tạo</option>
+                </select>
+            </div>
+            <div class="filter-right">
+                <button class="m-second-button m-filter-refresh"></button>
+            </div>
+        </div>
+        <div class="grid grid-employee" style="overflow-y:auto; overflow-x:auto;">
+            <table border="0" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th fieldName="CustomerCode">Ma khach hang</th>
+                        <th fieldName="FullName">Họ và tên</th>
+                        <th fieldName="Gender">Giới tính</th>
+                        <th fieldName="DateOfBirth" formatType="ddmmyyyy">Ngày sinh</th>
+                        <th fieldName="PhoneNumber">Số điện thoại</th>
+                        <th fieldName="Email">Email</th>
+                        <th fieldName="Address">Địa chỉ</th>
+                        <th fieldName="DebitAmount">Số tiền nợ</th>
+                        <th fieldName="MemberCardCode">Mã thẻ thành viên</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--<tr>
+                        <td>NV0001</td>
+                        <td>Nguyen nguyen A</td>
+                        <td>Nam</td>
+                        <td>22/12/1998</td>
+                        <td>0999999999</td>
+                        <td style="max-width:100px"><span>ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội, ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội</span></td>
+                    </tr>
+                    <tr>
+                        <td>NV0001</td>
+                        <td>Nguyen nguyen A</td>
+                        <td>Nam</td>
+                        <td>22/12/1998</td>
+                        <td>0999999999</td>
+                        <td style="max-width:100px"><span>ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội, ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội</span></td>
+                    </tr>
+                    <tr>
+                        <td>NV0001</td>
+                        <td>Nguyen nguyen A</td>
+                        <td>Nam</td>
+                        <td>22/12/1998</td>
+                        <td>0999999999</td>
+                        <td style="max-width:100px"><span>ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội, ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội</span></td>
+                    </tr>
+                    <tr>
+                        <td>NV0001</td>
+                        <td>Nguyen nguyen A</td>
+                        <td>Nam</td>
+                        <td>22/12/1998</td>
+                        <td>0999999999</td>
+                        <td style="max-width:100px"><span>ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội, ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội</span></td>
+                    </tr>
+                    <tr>
+                        <td>NV0001</td>
+                        <td>Nguyen nguyen A</td>
+                        <td>Nam</td>
+                        <td>22/12/1998</td>
+                        <td>0999999999</td>
+                        <td style="max-width:100px"><span>ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội, ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội</span></td>
+                    </tr>
+                    <tr>
+                        <td>NV0001</td>
+                        <td>Nguyen nguyen A</td>
+                        <td>Nam</td>
+                        <td>22/12/1998</td>
+                        <td>0999999999</td>
+                        <td style="max-width:100px"><span>ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội, ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội</span></td>
+                    </tr>
+                    <tr>
+                        <td>NV0001</td>
+                        <td>Nguyen nguyen A</td>
+                        <td>Nam</td>
+                        <td>22/12/1998</td>
+                        <td>0999999999</td>
+                        <td style="max-width:100px"><span>ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội, ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội</span></td>
+                    </tr>
+                    <tr>
+                        <td>NV0001</td>
+                        <td>Nguyen nguyen A</td>
+                        <td>Nam</td>
+                        <td>22/12/1998</td>
+                        <td>0999999999</td>
+                        <td style="max-width:100px"><span>ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội, ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội</span></td>
+                    </tr>
+                    <tr>
+                        <td>NV0001</td>
+                        <td>Nguyen nguyen A</td>
+                        <td>Nam</td>
+                        <td>22/12/1998</td>
+                        <td>0999999999</td>
+                        <td style="max-width:100px"><span>ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội, ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội</span></td>
+                    </tr>
+                    <tr>
+                        <td>NV0001</td>
+                        <td>Nguyen nguyen A</td>
+                        <td>Nam</td>
+                        <td>22/12/1998</td>
+                        <td>0999999999</td>
+                        <td style="max-width:100px"><span>ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội, ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội</span></td>
+                    </tr>
+                    <tr>
+                        <td>NV0001</td>
+                        <td>Nguyen nguyen A</td>
+                        <td>Nam</td>
+                        <td>22/12/1998</td>
+                        <td>0999999999</td>
+                        <td style="max-width:100px"><span>ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội, ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội</span></td>
+                    </tr>
+                    <tr>
+                        <td>NV0001</td>
+                        <td>Nguyen nguyen A</td>
+                        <td>Nam</td>
+                        <td>22/12/1998</td>
+                        <td>0999999999</td>
+                        <td style="max-width:100px"><span>ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội, ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội</span></td>
+                    </tr>
+                    <tr>
+                        <td>NV0001</td>
+                        <td>Nguyen nguyen A</td>
+                        <td>Nam</td>
+                        <td>22/12/1998</td>
+                        <td>0999999999</td>
+                        <td style="max-width:100px"><span>ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội, ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội</span></td>
+                    </tr>
+                    <tr>
+                        <td>NV0001</td>
+                        <td>Nguyen nguyen A</td>
+                        <td>Nam</td>
+                        <td>22/12/1998</td>
+                        <td>0999999999</td>
+                        <td style="max-width:100px"><span>ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội, ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội</span></td>
+                    </tr>
+                    <tr>
+                        <td>NV0001</td>
+                        <td>Nguyen nguyen A</td>
+                        <td>Nam</td>
+                        <td>22/12/1998</td>
+                        <td>0999999999</td>
+                        <td style="max-width:100px"><span>ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội, ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội</span></td>
+                    </tr>
+                    <tr>
+                        <td>NV0001</td>
+                        <td>Nguyen nguyen A</td>
+                        <td>Nam</td>
+                        <td>22/12/1998</td>
+                        <td>0999999999</td>
+                        <td style="max-width:100px"><span>ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội, ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội</span></td>
+                    </tr>
+                    <tr>
+                        <td>NV0001</td>
+                        <td>Nguyen nguyen A</td>
+                        <td>Nam</td>
+                        <td>22/12/1998</td>
+                        <td>0999999999</td>
+                        <td style="max-width:100px"><span>ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội, ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội</span></td>
+                    </tr>
+                    <tr>
+                        <td>NV0001</td>
+                        <td>Nguyen nguyen A</td>
+                        <td>Nam</td>
+                        <td>22/12/1998</td>
+                        <td>0999999999</td>
+                        <td style="max-width:100px"><span>ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội, ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội</span></td>
+                    </tr>
+                    <tr>
+                        <td>NV0001</td>
+                        <td>Nguyen nguyen A</td>
+                        <td>Nam</td>
+                        <td>22/12/1998</td>
+                        <td>0999999999</td>
+                        <td style="max-width:100px"><span>ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội, ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội</span></td>
+                    </tr>
+                    <tr>
+                        <td>NV0001</td>
+                        <td>Nguyen nguyen A</td>
+                        <td>Nam</td>
+                        <td>22/12/1998</td>
+                        <td>0999999999</td>
+                        <td style="max-width:100px"><span>ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội, ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội</span></td>
+                    </tr>
+                    <tr>
+                        <td>NV0001</td>
+                        <td>Nguyen nguyen A</td>
+                        <td>Nam</td>
+                        <td>22/12/1998</td>
+                        <td>0999999999</td>
+                        <td style="max-width:100px"><span>ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội, ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội</span></td>
+                    </tr>
+                    <tr>
+                        <td>NV0001</td>
+                        <td>Nguyen nguyen A</td>
+                        <td>Nam</td>
+                        <td>22/12/1998</td>
+                        <td>0999999999</td>
+                        <td style="max-width:100px"><span>ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội, ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội</span></td>
+                    </tr>
+                    <tr>
+                        <td>NV0001</td>
+                        <td>Nguyen nguyen A</td>
+                        <td>Nam</td>
+                        <td>22/12/1998</td>
+                        <td>0999999999</td>
+                        <td style="max-width:100px"><span>ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội, ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội</span></td>
+                    </tr>
+                    <tr>
+                        <td>NV0001</td>
+                        <td>Nguyen nguyen A</td>
+                        <td>Nam</td>
+                        <td>22/12/1998</td>
+                        <td>0999999999</td>
+                        <td style="max-width:100px"><span>ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội, ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội</span></td>
+                    </tr>
+                    <tr>
+                        <td>NV0001</td>
+                        <td>Nguyen nguyen A</td>
+                        <td>Nam</td>
+                        <td>22/12/1998</td>
+                        <td>0999999999</td>
+                        <td style="max-width:100px"><span>ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội, ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội</span></td>
+                    </tr>
+                    <tr>
+                        <td>NV0001</td>
+                        <td>Nguyen nguyen A</td>
+                        <td>Nam</td>
+                        <td>22/12/1998</td>
+                        <td>0999999999</td>
+                        <td style="max-width:100px"><span>ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội, ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội</span></td>
+                    </tr>
+                    <tr>
+                        <td>NV0001</td>
+                        <td>Nguyen nguyen A</td>
+                        <td>Nam</td>
+                        <td>22/12/1998</td>
+                        <td>0999999999</td>
+                        <td style="max-width:100px"><span>ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội, ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội</span></td>
+                    </tr>
+                    <tr>
+                        <td>NV0001</td>
+                        <td>Nguyen nguyen A</td>
+                        <td>Nam</td>
+                        <td>22/12/1998</td>
+                        <td>0999999999</td>
+                        <td style="max-width:100px"><span>ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội, ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội</span></td>
+                    </tr>
+                    <tr>
+                        <td>NV0001</td>
+                        <td>Nguyen nguyen A</td>
+                        <td>Nam</td>
+                        <td>22/12/1998</td>
+                        <td>0999999999</td>
+                        <td style="max-width:100px"><span>ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội, ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội</span></td>
+                    </tr>
+                    <tr>
+                        <td>NV0001</td>
+                        <td>Nguyen nguyen A</td>
+                        <td>Nam</td>
+                        <td>22/12/1998</td>
+                        <td>0999999999</td>
+                        <td style="max-width:100px"><span>ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội, ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội</span></td>
+                    </tr>
+                    <tr>
+                        <td>NV0001</td>
+                        <td>Nguyen nguyen A</td>
+                        <td>Nam</td>
+                        <td>22/12/1998</td>
+                        <td>0999999999</td>
+                        <td style="max-width:100px"><span>ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội, ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội</span></td>
+                    </tr>
+                    <tr>
+                        <td>NV0001</td>
+                        <td>Nguyen nguyen A</td>
+                        <td>Nam</td>
+                        <td>22/12/1998</td>
+                        <td>0999999999</td>
+                        <td style="max-width:100px"><span>ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội, ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội</span></td>
+                    </tr>
+                    <tr>
+                        <td>NV0001</td>
+                        <td>Nguyen nguyen A</td>
+                        <td>Nam</td>
+                        <td>22/12/1998</td>
+                        <td>0999999999</td>
+                        <td style="max-width:100px"><span>ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội, ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội</span></td>
+                    </tr>
+                    <tr>
+                        <td>NV0001</td>
+                        <td>Nguyen nguyen A</td>
+                        <td>Nam</td>
+                        <td>22/12/1998</td>
+                        <td>0999999999</td>
+                        <td style="max-width:100px"><span>ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội, ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội</span></td>
+                    </tr>
+                    <tr>
+                        <td>NV0001</td>
+                        <td>Nguyen nguyen A</td>
+                        <td>Nam</td>
+                        <td>22/12/1998</td>
+                        <td>0999999999</td>
+                        <td style="max-width:100px"><span>ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội, ĐHCNHN, Minh Khai, Từ Liêm, Hà Nội</span></td>
+                    </tr>-->
+                </tbody>
+            </table>
+
+        </div>
+        <div class="paging-bar">
+            <div class="paging-record-info">
+                Hiển thị <b>1-10/1000</b> Khach hang
+            </div>
+            <div class="paging-option">
+                <div class="paging-op">
+                    <div class="first"></div>
+                    <div class="bf"></div>
+                    <div class="af"></div>
+                    <div class="last"></div>
+                </div>
+
+            </div>
+            <div class="paging-record-option"><b>10</b> Khach hang/trang</div>
+        </div>
+    </div>
+
+    <div class="m-dialog dialog-detail">
+        <div class="dialog-model"></div>
+        <div class="dialog-content">
+            <div class="dialog-header">
+                <div class="dialog-header-title">Thông tin nhân viên</div>
+                <div class="dialog-header-close">
+                    <button></button>
+                </div>
+            </div>
+            <div class="dialog-body-1">
+                <div class="Colum-1">
+                    <div class="image"></div>
+                    <div class="text1">Vui lòng chọn ảnh có định dạng</div>
+                    <div class="text2">.jpg .jpeg .png .gif</div>
+                </div>
+                <div class="Colum-2">
+                    <div class="a-row">
+                        <div class="m-label">Mã khách hàng(*)</div>
+                        <div class="m-control"><input type="text" /></div>
+                    </div>
+                    <div class="a-row">
+                        <div class="m-label">Mã thẻ thành viên</div>
+                        <div class="m-control"><input type="text" /></div>
+                    </div>
+                    <div class="a-row">
+                        <div class="m-label">Ngày sinh</div>
+                        <div class="m-control"><input type="text" value="DateTime"/></div>
+                    </div>
+                </div>
+                <div class="Colum-3">
+                    <div class="a-row">
+                        <div class="m-label">Họ và tên(*)</div>
+                        <div class="m-control"><input type="text" /></div>
+                    </div>
+                    <div class="a-row">
+                        <div class="m-label">Nhóm khách hàng</div>
+                        <div class="m-control">
+                            <select name="Khach" id="customer">
+                                <option value="khachvip">Khách VIP</option>
+                                <option value="Khachvang">Khách Gold</option>
+                                <option value="khachbac">Khách Silver</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="a-row">
+                        <div class="m-label">Giới tính</div>
+                        <div class="m-control"><input type="radio" name="done" value="nam" />Nam</div>
+                        <div class="m-control"><input type="radio" name="done" value="nu" />Nữ</div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="dialog-body-2">
+                <div class="dialog-body-2-1-1">
+                    <div class="a-row">
+                        <div class="m-label">Email</div>
+                        <div class="m-control"><input type="text" value="example@dormain.com"/></div>
+                    </div>
+                    <div class="a-row">
+                        <div class="m-label">Số điện thoại</div>
+                        <div class="m-control"><input type="text" /></div>
+                    </div>
+                </div>
+                <div class="dialog-body-2-1-2">
+                    <div class="a-row">
+                        <div class="m-label">Tên công ty</div>
+                        <div class="m-control"><input type="text" /></div>
+                    </div>
+                    <div class="a-row">
+                        <div class="m-label">Mã số thuế</div>
+                        <div class="m-control"><input type="text"  value="Mã số thuế của công ty"/></div>
+                    </div>
+                </div>
+                <div class="a-row">
+                    <div class="m-label">Địa chỉ</div>
+                    <div class="m-control"><input type="text" /></div>
+                </div>
+
+            </div>
+            <div class="dialog-footer">
+                <div class="cancel">Hủy</div>
+                <div class="save">
+                    <div class="save-icon"></div>
+                    <div class="m-label">Lưu</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/lib/jquery-3.5.1.min.js"></script>
+    <script src="/js/common/common.js"></script>
+    <script src="/js/common/base.js"></script>
+    <script src="/js/page/customer.js"></script>
+</body>
+</html>

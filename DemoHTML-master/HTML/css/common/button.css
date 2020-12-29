@@ -1,0 +1,45 @@
+﻿.btn-default {
+    display:flex;
+    align-items:center;
+    background-color: #019160;
+    border-radius: 4px;
+    height: 40px;
+    font-size: 13px;
+    color: #ffffff;
+    font-family: GoogleSans-Regular;
+    padding-left: 16px;
+    padding-right: 16px;
+    outline:none;
+    border:none;
+    cursor:pointer;
+}
+.btn-default:hover{
+    background-color:#2F8E8E;
+}
+    .btn-default .btn-text {
+        margin-left: 8px;
+    }
+    .btn-default .btn-add{
+        background-position:center;
+    }
+.m-second-button {
+    border: 1px solid #bbbbbb;
+    outline:none;
+    border-radius: 4px;
+    height: 40px;
+    color: #000;
+    padding-left: 24px;
+    padding-right: 24px;
+    text-align: center;
+    cursor:pointer;
+}
+.m-second-button:hover{
+    background-color:#e9ebee;
+}
+.m-filter-refresh {
+    background-image: url('/content/icon/refresh.png');
+    background-repeat: no-repeat;
+    height: 40px;
+    background-position: center;
+    /*right: 16px;*/
+}
